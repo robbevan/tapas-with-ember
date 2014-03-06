@@ -64,7 +64,7 @@ task 'test', 'run brunch in the test environment', ->
 updateMessage = 'update Tapas to latest (Cakefile, package.json, portkey.json,
  config.coffee, generators/*)'
 task 'tapas:update', updateMessage, (options) ->
-  url = 'https://codeload.github.com/mutewinter/tapas-with-ember/zip/master'
+  url = 'https://codeload.github.com/robbevan/tapas-with-ember/zip/master'
   filesToUpdate = [
     'Cakefile'
     'package.json'

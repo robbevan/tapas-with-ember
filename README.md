@@ -62,7 +62,7 @@ Now that you've got Brunch installed, you're three commands away from a running
 Ember app!
 
 ```bash
-brunch new gh:mutewinter/tapas-with-ember <appname>
+brunch new gh:robbevan/tapas-with-ember <appname>
 cd <appname>
 cake server
 ```
