@@ -91,7 +91,7 @@ See [the FAQ][] in the Wiki for answers to questions like:
 * [Handlebars 1.3.0][Handlebars]
 * [jQuery 1.11.0](http://jquery.com)
 * [CoffeeScript 1.7.1][CoffeeScript]
-* [Stylus][]
+* [Sass][]
 * [HTML5 Boilerplate](http://html5boilerplate.com)
 * [Normalize.css](http://necolas.github.io/normalize.css/)
 * _Optional_ [Ember Data][]
@@ -273,7 +273,7 @@ It updates and **overwites** `Cakefile`, `package.json`, `portkey.json`,
 
 
 [brunch-with-ember-reloaded]: https://github.com/gcollazo/brunch-with-ember-reloaded
-[Stylus]: http://learnboost.github.io/stylus/
+[Sass]: http://sass-lang.com/
 [CoffeeScript]: http://coffeescript.org/
 [auto-reload-brunch]: https://github.com/brunch/auto-reload-brunch
 [Brunch]: http://brunch.io
