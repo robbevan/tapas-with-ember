@@ -39,7 +39,13 @@ exports.config =
     templates:
       precompile: true
       root: 'templates'
+      defaultExtension: 'emblem'
       joinTo: 'scripts/app.js' : /^app/
+      paths:
+        jquery: 'bower_components/jquery/dist/jquery.js'
+        ember: "vendor/ember/#{environment}/ember.js"
+        handlebars: 'bower_components/handlebars/handlebars.js'
+        emblem: 'vendor/scripts/emblem.js'
 
   # allow _ prefixed templates so partials work
   conventions:
