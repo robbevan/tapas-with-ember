@@ -70,22 +70,24 @@ cake server
 Open [`localhost:3333`](http://localhost:3333) and check out your brand new
 Ember app! Every time you save a file, the browser will automatically refresh.
 
-Tapas with Ember runs the latest release channel Ember. You can update to Beta
-or Canary builds using `cake ember:install`. It's also easy to install the
-latest Ember Data or Ember Model using the `cake` scripts below.
+Tapas with Ember runs the latest release channel Ember and latest beta of Ember
+Data. You can update to Beta or Canary builds using `cake ember:install`. It's
+also easy to install the latest Ember Data or Ember Model using the `cake`
+scripts below.
 
 ## Frequently Asked Questions
 
 See [the FAQ][] in the Wiki for answers to questions like:
 
 * How do I add a JavaScript / CSS Library?
-* How do I addd [Bootstrap](http://getbootstrap.com/)?
+* How do I add [Bootstrap](http://getbootstrap.com/)?
 * How do I detect the environment?
 * How do I set Ember feature flags?
 
 ## Technology
 
-* [Ember 1.4.0][Ember]
+* [Ember 1.5.1][Ember]
+* [Ember Data 1.0.0-beta.7][Ember Data]
 * [Brunch 1.7.13][Brunch]
 * [Bower](http://bower.io)
 * [Handlebars 1.3.0][Handlebars]
@@ -94,7 +96,6 @@ See [the FAQ][] in the Wiki for answers to questions like:
 * [Sass][]
 * [HTML5 Boilerplate](http://html5boilerplate.com)
 * [Normalize.css](http://necolas.github.io/normalize.css/)
-* _Optional_ [Ember Data][]
 * _Optional_ [Ember Model][]
 
 
@@ -107,7 +108,7 @@ other versions of Ember using the commands below.
 
 ```bash
 cake ember:install
-# cake -t "v1.4.0" ember:install # for v1.4.0 tagged release
+# cake -t "v1.5.1" ember:install # for v1.5.1 tagged release
 # cake -c "beta" ember:install # for beta
 # cake -c "canary" ember:install # for canary
 ```
@@ -118,7 +119,7 @@ _Note: `cake ember:list` displays the tagged releases since 1.0.0._
 
 ```bash
 cake ember-data:install
-# cake -t "v1.0.0-beta.4" ember-data:install # for v1.0.0-beta.4 tagged release
+# cake -t "v1.0.0-beta.7" ember-data:install # for v1.0.0-beta.7 tagged release
 # cake -c "canary" ember-data:install # for canary
 ```
 
@@ -129,6 +130,8 @@ _Note: `cake ember-data:list` displays all tagged releases._
 ```bash
 cake ember-model:install
 ```
+
+_Note: Ember Model can not be used with Ember Data._
 
 ## Generators
 
@@ -170,6 +173,7 @@ to your own server.
 
 1. Install Mina by running `gem install mina`
 1. Fill in your credentials in [`config/deploy.rb`][deployment script]
+1. Setup your server, I use [Nginx][] with [this config][nginx config]
 1. Run `mina setup`
 1. Run `mina deploy`
 
@@ -197,7 +201,7 @@ To use this app with [Pow.cx](http://pow.cx/), follow these simple steps:
 1. Install [Pow.cx](http://pow.cx/)
 1. `echo 3333 > ~/.pow/<appname>`
 1. Start the server with `cake server`
-1. Open [tapas-with-ember.dev](http://<app-name>.dev)
+1. Open <http://appname.dev>
 
 ## Testing
 
@@ -292,3 +296,5 @@ It updates and **overwites** `Cakefile`, `package.json`, `portkey.json`,
 [digest-brunch]: https://github.com/mutewinter/digest-brunch
 [Bower]: http://bower.io
 [Handlebars]: http://handlebarsjs.com
+[Nginx]: http://nginx.org/
+[nginx config]: https://github.com/mutewinter/tapas-with-ember/wiki/nginx

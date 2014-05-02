@@ -36,7 +36,7 @@
   },
   "app/helpers/*.coffee": {
     "type": "helper",
-    "template": "Ember.Handlebars.helper '%s', (person) ->\n  \"#{person.get('firstName')} #{person.get('lastName')}\"\n, 'firstName', 'lastName'",
+    "template": "Ember.Handlebars.helper '%s', (value, options) ->",
     "test": "tests/helpers/%s_test.coffee"
   },
   "app/initializers/*.coffee": {
@@ -62,10 +62,10 @@
   "app/serializers/*.coffee": {
     "type": "serializer",
     "test": "tests/serializers/%s.coffee",
-    "template": "module.exports = App.%SSerializer = DS.RESTSeriazer.extend()"
+    "template": "module.exports = App.%SSerializer = DS.RESTSerializer.extend()"
   },
 
-  "app/config/*": {
+  "app/config/*.coffee": {
     "type": "config"
   },
   "config/environments/*.coffee": {
